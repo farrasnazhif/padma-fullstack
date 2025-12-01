@@ -1,4 +1,4 @@
-# Toko Kopi Padma — Web Ordering System (Native PHP + MySQL)
+# Toko Kopi Padma — Web Ordering System
 
 Toko Kopi Padma adalah aplikasi web sederhana untuk pemesanan menu cafe.  
 Aplikasi ini dibuat menggunakan **Native PHP**, **MySQL**, **HTML**, **CSS**, **JavaScript**, dan **Bootstrap 5**.
