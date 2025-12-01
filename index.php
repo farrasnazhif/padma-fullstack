@@ -114,34 +114,24 @@ include "config/db.php";
         </p>
 
         <div class="menu-grid">
-          <article class="menu-item">
-            <h3>Espresso</h3>
-            <p class="price">Rp20K</p>
-            <p class="desc">Shot pekat dengan cita rasa khas Padma Blend.</p>
-          </article>
+  <?php
+    // Ambil 4 menu terbaru
+    $menuQuery = mysqli_query($conn, "SELECT * FROM menu ORDER BY created_at DESC LIMIT 4");
 
-          <article class="menu-item">
-            <h3>Americano</h3>
-            <p class="price">Rp22K</p>
-            <p class="desc">
-              Ringkas, halus, dan nikmat — espresso dengan air panas.
-            </p>
-          </article>
+    while ($m = mysqli_fetch_assoc($menuQuery)) {
+  ?>
 
-          <article class="menu-item">
-            <h3>Filter Coffee</h3>
-            <p class="price">Rp30K</p>
-            <p class="desc">
-              Seduhan perlahan yang menonjolkan karakter setiap biji.
-            </p>
-          </article>
+    <article class="menu-item">
+      <h3><?= htmlspecialchars($m['name']) ?></h3>
+      <p class="price">Rp<?= number_format($m['price'] / 1000) ?>K</p>
 
-          <article class="menu-item">
-            <h3>Cold Brew</h3>
-            <p class="price">Rp28K</p>
-            <p class="desc">Seduhan dingin yang manis alami dan menyegarkan.</p>
-          </article>
-        </div>
+      <p class="desc">
+        <?= htmlspecialchars($m['description']) ?>
+      </p>
+    </article>
+
+  <?php } ?>
+</div>
 
         <div class="hero-cta" style="text-align:center; margin-top:30px;">
           <a href="menu.php" class="btn">Lihat Menu Lengkap</a>
