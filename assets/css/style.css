@@ -1,0 +1,7 @@
+.hero {
+  background: url("../img/coffee.jpg") center/cover no-repeat;
+  padding: 120px 0;
+}
+body {
+  font-family: Arial, sans-serif;
+}
