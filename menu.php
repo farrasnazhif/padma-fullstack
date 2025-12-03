@@ -7,8 +7,10 @@ $query = mysqli_query($conn, "SELECT * FROM menu ORDER BY created_at DESC");
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Menu — Toko Kopi Padma</title>
+   <link rel="icon" type="image/png" href="assets/logo/logoheader.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">

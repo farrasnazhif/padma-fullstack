@@ -57,7 +57,7 @@ include "config/db.php";
         </div>
 
         <div class="hero-cta">
-          <a href="menu.php" class="btn">Lihat Menu</a>
+          <a href="menu.php" class="btn">Pesan Sekarang</a>
         </div>
       </section>
 
