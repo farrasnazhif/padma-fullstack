@@ -24,12 +24,12 @@ $query = mysqli_query($conn, "SELECT * FROM menu ORDER BY created_at DESC");
     }
     .menu-header h1 {
       font-family: "Playfair Display", serif;
-      font-size: 42px;
+      font-size: 38px;
       margin-bottom: 10px;
     }
     .menu-header p {
       color: var(--muted);
-      max-width: 600px;
+      max-width: 400px;
       margin: 0 auto;
       font-size: 16px;
     }
@@ -67,19 +67,21 @@ $query = mysqli_query($conn, "SELECT * FROM menu ORDER BY created_at DESC");
     }
 
     .menu-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
       padding: 18px;
     }
 
     .menu-card-body h3 {
       font-size: 20px;
-      margin: 0 0 6px;
+      margin: 0 0 0 0;
     }
 
     .menu-card-body p.desc {
       font-size: 14px;
       color: var(--muted);
-      margin-bottom: 10px;
-      min-height: 40px;
+      margin: 0;
     }
 
     .menu-card-body .price {
@@ -89,7 +91,8 @@ $query = mysqli_query($conn, "SELECT * FROM menu ORDER BY created_at DESC");
     }
 
     .menu-card-body .btn-cart {
-      display: inline-block;
+      display: flex;
+        justify-content: center;
       padding: 10px 18px;
       border-radius: 25px;
       background: #111;
