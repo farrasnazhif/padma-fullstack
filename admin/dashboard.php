@@ -9,8 +9,10 @@ $orders = mysqli_query($conn, "SELECT * FROM orders ORDER BY created_at DESC");
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard Admin — Kopi Padma</title>
+    <link rel="icon" type="image/png" href="../assets/logo/logoheader.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
