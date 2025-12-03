@@ -21,12 +21,11 @@ if ($_POST) {
     $price = intval($_POST['price']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
 
-    // Jika upload gambar baru
     if (!empty($_FILES['image']['name'])) {
         $image = time() . "_" . basename($_FILES['image']['name']);
         move_uploaded_file($_FILES['image']['tmp_name'], "../assets/img/" . $image);
     } else {
-        $image = $data['image']; // tetap pakai gambar lama
+        $image = $data['image'];
     }
 
     mysqli_query($conn, "
@@ -45,40 +44,140 @@ if ($_POST) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Edit Menu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Edit Menu — Kopi Padma</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f2f2f2;
+      --accent: #111;
+      --muted: #6a6a6a;
+      --radius: 12px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: "Inter", sans-serif;
+      color: var(--accent);
+    }
+
+    .container {
+      width: 92%;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 26px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    img.preview {
+      width: 160px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 25px;
+      background: #111;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      margin-right: 6px;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #333;
+    }
+
+    .btn-secondary {
+      background: #888;
+    }
+
+    .btn-secondary:hover {
+      background: #666;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container py-5">
-<h3>Edit Menu</h3>
+<div class="container">
 
-<form method="POST" enctype="multipart/form-data">
+  <h2>Edit Menu</h2>
 
-  <label>Nama</label>
-  <input type="text" name="name" class="form-control mb-2" value="<?= $data['name'] ?>">
+  <div class="card">
+    <form method="POST" enctype="multipart/form-data">
 
-  <label>Kategori</label>
-  <input type="text" name="category" class="form-control mb-2" value="<?= $data['category'] ?>">
+      <label>Nama Menu</label>
+      <input type="text" name="name" value="<?= $data['name'] ?>" required>
 
-  <label>Harga</label>
-  <input type="number" name="price" class="form-control mb-2" value="<?= $data['price'] ?>">
+      <label>Kategori</label>
+      <input type="text" name="category" value="<?= $data['category'] ?>" required>
 
-  <label>Deskripsi</label>
-  <textarea name="description" class="form-control mb-2"><?= $data['description'] ?></textarea>
+      <label>Harga</label>
+      <input type="number" name="price" value="<?= $data['price'] ?>" required>
 
-  <label>Gambar saat ini</label>
-  <br>
-  <img src="../assets/img/<?= $data['image'] ?>" width="150" class="mb-3">
+      <label>Deskripsi</label>
+      <textarea name="description" required><?= $data['description'] ?></textarea>
 
-  <input type="file" name="image" class="form-control mb-3">
+      <label>Gambar Saat Ini</label>
+      <img src="../assets/img/<?= $data['image'] ?>" class="preview">
 
-  <button class="btn btn-primary">Update</button>
-  <a href="dashboard.php" class="btn btn-secondary">Kembali</a>
+      <label>Upload Gambar Baru (opsional)</label>
+      <input type="file" name="image">
 
-</form>
+      <button class="btn" type="submit">Simpan Perubahan</button>
+      <a href="dashboard.php" class="btn btn-secondary">Kembali</a>
+
+    </form>
+  </div>
 
 </div>
 
