@@ -1,6 +1,8 @@
 # Toko Kopi Padma — Web Ordering System
 
-<video controls src="Screen Recording 2025-12-05 at 18.43.51.mov" title="Title"></video>
+Di bawah ini adalah versi local/development dari produk web app toko kopi padma.
+
+[Documentation Video](https://drive.google.com/drive/folders/1Ko6eR8Xzw-88C54Uj3uZkVH6iOkjgB07)
 
 Toko Kopi Padma adalah aplikasi web sederhana untuk pemesanan menu cafe.  
 Aplikasi ini dibuat menggunakan **Native PHP**, **MySQL**, **HTML**, **CSS**, **JavaScript**, dan **Bootstrap 5**.
