@@ -220,12 +220,18 @@ $orders = mysqli_query($conn, "SELECT * FROM orders ORDER BY created_at DESC");
   <!-- ORDER LIST -->
   <h3>Daftar Pesanan</h3>
 
-  <?php while($o = mysqli_fetch_assoc($orders)) { ?>
-    <div class="order-card">
+<?php while($o = mysqli_fetch_assoc($orders)) { ?>
+  <div class="order-card">
       <strong>#<?= $o['queue_number'] ?> — <?= $o['customer_name'] ?></strong>
       <p>Total: Rp <?= number_format($o['total_price'], 0, ',', '.') ?></p>
-    </div>
-  <?php } ?>
+
+      <a href="delete_order.php?id=<?= $o['id'] ?>"
+         class="btn-sm btn-delete"
+         onclick="return confirm('Yakin ingin menghapus pesanan ini?')">
+         Delete
+      </a>
+  </div>
+<?php } ?>
 
 </div>
 

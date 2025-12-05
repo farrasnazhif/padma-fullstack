@@ -101,6 +101,7 @@ $o = mysqli_fetch_assoc($q);
     <div class="success-card">
 
         <h1 class="success-title">Pesanan Berhasil!</h1>
+        <h1 class="success-title">Silahkan ditunggu pesanannya.</h1>
 
         <div class="queue-number">#<?= $o['queue_number'] ?></div>
 

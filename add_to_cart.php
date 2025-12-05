@@ -2,24 +2,31 @@
 session_start();
 include "config/db.php";
 
-$id = $_GET['id'];
+$id = $_POST["id"];
+$qty = max(1, intval($_POST["qty"])); // minimal qty = 1
 
-$menu = mysqli_query($conn, "SELECT * FROM menu WHERE id = $id");
-$item = mysqli_fetch_assoc($menu);
+$q = mysqli_query($conn, "SELECT * FROM menu WHERE id=$id");
+$m = mysqli_fetch_assoc($q);
 
-if (!$item) die("Menu tidak ditemukan");
+if (!$m) {
+    die("Menu tidak ditemukan");
+}
 
-if (!isset($_SESSION['cart'])) $_SESSION['cart'] = [];
+if (!isset($_SESSION["cart"])) {
+    $_SESSION["cart"] = [];
+}
 
-if (!isset($_SESSION['cart'][$id])) {
-    $_SESSION['cart'][$id] = [
-        "name" => $item['name'],
-        "price" => $item['price'],
-        "qty" => 1
-    ];
+// jika sudah ada, tambahkan qty
+if (isset($_SESSION["cart"][$id])) {
+    $_SESSION["cart"][$id]["qty"] += $qty;
 } else {
-    $_SESSION['cart'][$id]["qty"]++;
+    $_SESSION["cart"][$id] = [
+        "name" => $m["name"],
+        "price" => $m["price"],
+        "qty" => $qty
+    ];
 }
 
 header("Location: cart.php");
+exit;
 ?>
