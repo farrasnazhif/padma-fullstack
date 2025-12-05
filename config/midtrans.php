@@ -1,10 +1,10 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-// Load secret keys
+// load secret keys
 $env = include __DIR__ . '/.env.php';
 
-// Midtrans config
+// midtrans config
 \Midtrans\Config::$serverKey = $env["MIDTRANS_SERVER_KEY"];
 \Midtrans\Config::$clientKey = $env["MIDTRANS_CLIENT_KEY"];
 

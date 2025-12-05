@@ -9,10 +9,10 @@ include "../config/db.php";
 
 $id = intval($_GET['id']);
 
-// Hapus semua item pesanan
+// hapus semua item pesanan
 mysqli_query($conn, "DELETE FROM order_items WHERE order_id = $id");
 
-// Hapus pesanan utama
+// hapus pesanan utama
 mysqli_query($conn, "DELETE FROM orders WHERE id = $id");
 
 header("Location: dashboard.php");

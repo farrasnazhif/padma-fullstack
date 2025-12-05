@@ -12,7 +12,7 @@ $id = $_GET['id'];
 $query = mysqli_query($conn, "SELECT image FROM menu WHERE id=$id");
 $data = mysqli_fetch_assoc($query);
 
-// Hapus file gambar jika ada
+// hapus file gambar jika ada
 if ($data && !empty($data['image'])) {
     $imagePath = "../assets/img/" . $data['image'];
     if (file_exists($imagePath)) {

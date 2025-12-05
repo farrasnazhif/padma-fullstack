@@ -10,14 +10,13 @@ include "config/db.php";
     <title>Toko Kopi Padma — Nikmati Setiap Seduhan</title>
     <link rel="icon" type="image/png" href="assets/logo/logoheader.png" />
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
@@ -116,7 +115,7 @@ include "config/db.php";
 
         <div class="menu-grid">
   <?php
-    // Ambil 4 menu terbaru
+    // ambil 4 menu terbaru
     $menuQuery = mysqli_query($conn, "SELECT * FROM menu ORDER BY created_at DESC LIMIT 4");
 
     while ($m = mysqli_fetch_assoc($menuQuery)) {

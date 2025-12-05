@@ -13,7 +13,7 @@ if ($_POST) {
     $price = intval($_POST['price']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
 
-    // Handle upload gambar
+    // handle upload gambar
     $image = "";
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
         $image = time() . "_" . basename($_FILES['image']['name']);

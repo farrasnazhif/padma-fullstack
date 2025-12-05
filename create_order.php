@@ -16,7 +16,7 @@ $cart = $_SESSION['cart'] ?? [];
 $total = 0;
 foreach ($cart as $c) $total += $c['qty'] * $c['price'];
 
-// Buat order pending
+// buat order pending
 mysqli_query($conn,
 "INSERT INTO orders(customer_name, phone, type, total_price, payment_method, payment_status)
  VALUES('$name', '$phone', '$type', '$total', 'midtrans', 'pending')");
@@ -29,7 +29,7 @@ $midtrans_order_id = "PADMA-$order_id-" . time();
 mysqli_query($conn,
 "UPDATE orders SET midtrans_order_id='$midtrans_order_id' WHERE id=$order_id");
 
-// Setup Snap
+// setup Snap
 $params = [
     "transaction_details" => [
         "order_id" => $midtrans_order_id,

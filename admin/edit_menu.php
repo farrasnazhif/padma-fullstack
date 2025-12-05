@@ -170,7 +170,7 @@ if ($_POST) {
       <label>Gambar Saat Ini</label>
       <img src="../assets/img/<?= $data['image'] ?>" class="preview">
 
-      <label>Upload Gambar Baru (opsional)</label>
+      <label>Upload Gambar Baru</label>
       <input type="file" name="image">
 
       <button class="btn" type="submit">Simpan Perubahan</button>

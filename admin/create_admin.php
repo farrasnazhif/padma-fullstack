@@ -1,15 +1,15 @@
 <?php
 include "../config/db.php";
 
-// === SET ADMIN DEFAULT DI SINI ===
+// set admin default
 $admin_email = "admin@padma.test";
 $admin_password = "admin123"; 
 $admin_name = "Administrator";
 
-// Hash password sebelum disimpan
+// hash password sebelum disimpan ke db
 $hashed_password = password_hash($admin_password, PASSWORD_DEFAULT);
 
-// Cek apakah admin sudah ada
+// cek apakah admin sudah ada
 $check = mysqli_query($conn, "SELECT * FROM admin WHERE email='$admin_email'");
 if (mysqli_num_rows($check) > 0) {
     echo "<h3>Admin sudah ada.</h3>";
@@ -19,7 +19,7 @@ if (mysqli_num_rows($check) > 0) {
     exit;
 }
 
-// Insert admin baru
+// insert admin baru
 $q = mysqli_query($conn, "
     INSERT INTO admin(email, password, name)
     VALUES('$admin_email', '$hashed_password', '$admin_name')

@@ -131,7 +131,7 @@ foreach ($cart as $c) $total += $c['qty'] * $c['price'];
 
 </div>
 
-<!-- Snap.js → client key aman dari backend -->
+<!-- pakai snap.js agar client key aman dan hanya diambil dari backend -->
 <script src="https://app.sandbox.midtrans.com/snap/snap.js"
         data-client-key="<?= midtrans_client_key() ?>"></script>
 
