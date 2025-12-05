@@ -31,6 +31,7 @@ include "config/db.php";
           <li><a href="#menu">Menu</a></li>
           <li><a href="#galeri">Galeri</a></li>
           <li><a href="#lokasi">Lokasi</a></li>
+          <li><a href="/padma/cart.php">Keranjang</a></li>
         </ul>
       </nav>
     </header>

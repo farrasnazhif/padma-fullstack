@@ -7,8 +7,10 @@ foreach ($cart as $c) $total += $c['qty'] * $c['price'];
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
+ <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Keranjang — Toko Kopi Padma</title>
+ <link rel="icon" type="image/png" href="assets/logo/logoheader.png" />
 <link rel="stylesheet" href="assets/css/style.css">
 
 <style>
@@ -88,6 +90,9 @@ foreach ($cart as $c) $total += $c['qty'] * $c['price'];
 <?php if (!$cart) { ?>
   <p>Keranjang kosong.</p>
 
+  <div class="hero-cta" style="text-align:center; margin-top:30px;">
+          <a href="menu.php" class="btn">Lihat Menu Lengkap</a>
+        </div>
 <?php } else { ?>
 
 <form action="update_cart.php" method="POST">
