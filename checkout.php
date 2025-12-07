@@ -14,7 +14,7 @@ foreach ($cart as $c) $total += $c['qty'] * $c['price'];
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Checkout — Toko Kopi Padma</title>
+    <title>Checkout | Toko Kopi Padma</title>
 
     <link rel="icon" type="image/png" href="assets/logo/logoheader.png" />
     <link rel="stylesheet" href="assets/css/style.css">

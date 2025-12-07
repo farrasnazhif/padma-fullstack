@@ -7,7 +7,7 @@ include "config/db.php";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Toko Kopi Padma — Nikmati Setiap Seduhan</title>
+    <title>Toko Kopi Padma | Nikmati Setiap Seduhan</title>
     <link rel="icon" type="image/png" href="assets/logo/logoheader.png" />
 
     <!-- Fonts -->

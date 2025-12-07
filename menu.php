@@ -10,7 +10,7 @@ $query = mysqli_query($conn, "SELECT * FROM menu ORDER BY created_at DESC");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
-  <title>Menu — Toko Kopi Padma</title>
+  <title>Menu | Toko Kopi Padma</title>
  <link rel="icon" type="image/png" href="assets/logo/logoheader.png" />
   <link rel="stylesheet" href="assets/css/style.css">
 

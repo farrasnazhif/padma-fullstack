@@ -1,4 +1,4 @@
-# Toko Kopi Padma — Web Ordering System
+# Toko Kopi Padma | Web Ordering System
 
 Di bawah ini adalah versi local/development dari produk web app toko kopi padma.
 

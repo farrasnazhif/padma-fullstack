@@ -47,7 +47,7 @@ if ($_POST) {
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Edit Menu — Kopi Padma</title>
+  <title>Edit Menu | Kopi Padma</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

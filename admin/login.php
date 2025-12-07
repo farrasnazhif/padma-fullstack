@@ -23,7 +23,7 @@ if ($_POST) {
 <head>
   <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login Admin — Kopi Padma</title>
+  <title>Login Admin | Kopi Padma</title>
    <link rel="icon" type="image/png" href="../assets/logo/logoheader.png" />
 
   <!-- Fonts -->

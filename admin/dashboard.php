@@ -11,7 +11,7 @@ $orders = mysqli_query($conn, "SELECT * FROM orders ORDER BY created_at DESC");
 <head>
    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dashboard Admin — Kopi Padma</title>
+  <title>Dashboard Admin | Kopi Padma</title>
     <link rel="icon" type="image/png" href="../assets/logo/logoheader.png" />
 
   <!-- Fonts -->

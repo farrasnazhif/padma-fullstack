@@ -9,7 +9,7 @@ $o = mysqli_fetch_assoc($q);
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pesanan Sukses — Toko Kopi Padma</title>
+    <title>Pesanan Sukses | Toko Kopi Padma</title>
 
     <link rel="icon" type="image/png" href="assets/logo/logoheader.png" />
 
