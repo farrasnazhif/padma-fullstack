@@ -5,6 +5,8 @@ $pass = "root"; // default MAMP
 $db   = "padma_db";
 $port = 8889;   // MySQL port for MAMP
 
+// development
+
 $conn = mysqli_connect($host, $user, $pass, $db, $port);
 
 if (!$conn) {
