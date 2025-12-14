@@ -471,3 +471,9 @@ http://localhost:8888/padma/admin/login.php
 # Deployment
 
 Karena kami mengalami kendala saay deployment, hasil website kami bisa dilihat melalui [video berikut.](https://drive.google.com/drive/folders/1Ko6eR8Xzw-88C54Uj3uZkVH6iOkjgB07)
+
+# Pembagian Tugas
+
+- Dafa Kumara Sahasika (5025241112) : Frontend
+- Faqih Ali Rabbani (5025241255) : Backend
+- Farras Nazhif Pratikno (5025241260) : Integrasi Midtrans, Database
